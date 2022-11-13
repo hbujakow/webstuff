@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6 Task 1 - animation</title>
+    <style type="text/css">
+        #mydiv{
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        var pos = 0;
+
+        function move_window() {
+            document.getElementById('mydiv').style.top = (2 * pos) + 'px';
+            document.getElementById('mydiv').style.left = pos + 'px';
+            pos += 10;
+            if (pos > 200) {
+                pos = 0;
+            }
+           // setTimeout(move_window, 300);
+        }
+    </script>
+</head>
+
+<body onload=setInterval(move_window,300)>
+    <div id="mydiv">[]</div>
+</body>
+
+</html>

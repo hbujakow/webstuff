@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style type="text/css">
+        button {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+        
+        .positive {
+            background-color: green;
+        }
+        
+        .negative {
+            background-color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        var width = 0;
+        var height = 0;
+        var counter = 0;
+        var step = 1000;
+        window.onload = function(){
+            width = window.innerWidth || document.documentElement.clientWidth;
+            height = window.innerHeight || document.documentElement.clientHeight;
+
+            var buttons = document.getElementsByTagName('button');
+            for(var i = 0; i < buttons.length; i++){
+                initiliaze_button(buttons[i]);
+            }
+
+        }
+        function initiliaze_button(button){
+            var x = Math.round(Math.random() * (width-20));
+            var y = Math.round(Math.random() * (height-20));
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+
+            button.onclick = button_clicked;
+
+            var time_handler = create_time_handler(button,x,y);
+            time_handler();
+        }
+        
+        //callback function
+        function create_time_handler(button,x,y){
+            return function(){
+                var new_x = Math.round(Math.random() * (width-20));
+                var new_y = Math.round(Math.random() * (height-20));
+                button.style.left = new_x + 'px';
+                button.style.top = new_y + 'px';
+
+                var dx = new_x - x;
+                var dy = new_y - y;
+                var time = Math.sqrt(dx*dx + dy*dy) * step;
+                setTimeout(create_time_handler(button,new_x,new_y),time);
+    
+
+
+                //x += Math.round(Math.random() * 10 - 5);
+                //y += Math.round(Math.random() * 10 - 5);
+                //button.style.left = x + 'px';
+                //button.style.top = y + 'px';
+                //setTimeout(create_time_handler(button,x,y),step);
+            }
+        }
+
+        function button_clicked() {
+            if(this.className == 'positive'){
+                counter += 5;
+            }else{
+                counter -= 10;
+            }
+
+            if(counter > 20){
+                counter = 0;
+                step /= 2;
+                if(step<=0) step = 1;
+                var button = document.createElement('button');
+                initiliaze_button(button);
+                document.body.appendChild(button);
+                button.setAttribute('class','positive');
+                button.textContent = '$';
+            }
+        
+            // document.getElementById('counter').innerHTML = counter; //bad practice
+            display_counter();
+        }
+
+        function display_counter() {
+            var div_counter = document.getElementById('counter');
+            while(div_counter.childNodes.length > 0){
+                div_counter.removeChild(div_counter.childNodes[0]);
+            }
+            var text_counter = document.createTextNode(counter);
+            div_counter.appendChild(text_counter);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="counter"></div>
+    <button class="positive">$</button>
+    <button class="negative">~</button>
+    <button class="positive">$</button>
+    <button class="negative">~</button>
+    <button class="positive">$</button>
+    <button class="negative">~</button>
+    <button class="positive">$</button>
+    <button class="negative">~</button>
+    <button class="positive">$</button>
+    <button class="negative">~</button>
+    <button class="positive">$</button>
+    <button class="negative">~</button>
+</body>
+
+</html>

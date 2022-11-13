@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        var i = 0;
+        // var upperList = [url1, url2, url3, url4]; //FILL valid 
+        var upperList = ['http://images.wikia.com/lotr/images/d/df/Glorfindel_by_Magali_Villanueve.jpg',
+							'http://www.theagencyinc.com/wp-content/uploads/2013/05/gollum2.jpg',
+							'http://www.pxleyes.com/images/contests/minimalist-poster/fullsize/TLOTR-4e13f5cfa9a09.jpg',
+							'http://images4.fanpop.com/image/photos/19800000/TLOTR-lord-of-the-rings-19838193-320-400.jpg'
+							];
+
+        var lowerList = [];
+
+
+        function change() {
+            var upper = document.getElementById("upper");
+            var images = upper.getElementsByTagName("img");
+            if(images.length>0){
+                upper.removeChild(images[0]);
+            }
+            var image = document.createElement("img");
+            
+            ++i;
+            i %= upperList.length;
+            image.src = upperList[i];
+
+            image.onclick = function() {
+                var clickedImageAddress = upperList.splice(upperList.indexOf(this.src), 1)[0];
+                lowerList.push(clickedImageAddress);
+                var lower = document.getElementById("lower");
+                imageLarge = document.createElement("img");
+                imageLarge.src = clickedImageAddress;
+                imageLarge.style.position = "absolute";
+                imageLarge.style.top = "0px";
+                document.body.appendChild(imageLarge);
+                setTimeout(function() {
+                    document.body.removeChild(imageLarge);
+                    var imageLower = document.createElement("img");
+
+                    imageLower.src = clickedImageAddress;
+                    lower.appendChild(imageLower);
+
+                    while(lower.children.length){
+                        lower.removeChild(lower.children[0]);
+                    }
+                    // jakies pierdolenie
+                    for(var j = 0;j<lowerList.length;j++){
+                        var imageLower = document.createElement("img");
+                        imageLower.src = lowerList[j];
+                        lower.appendChild(imageLower);
+                    }
+                }, 2000);
+            }
+
+            upper.appendChild(image);
+        }
+
+        function loader() {
+            setInterval('change()', 1000);
+        }
+
+        window.onload = loader;
+    </script>
+    <style type="text/css">
+        #upper {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            left: 0px;
+            height: 66%;
+            text-align: center;
+        }
+        
+        #lower {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            height: 34%;
+        }
+        
+        img {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="upper"></div>
+    <div id="lower"></div>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" type="text/css" href="task2.css">
+    <script src="../script.js"></script>
+</head>
+
+<body onload="setValidation()">
+    <h1>Form</h1>
+    <!-- on submit - return value use is ... -->
+    <form action="" onsubmit="validate()">
+        <div class="formfield"><label for="age">Age</label> <input type="text" name="age" id="age">
+            <!-- Evnets : onblur, onchange, ... -->
+        </div>
+        <div class="formfield"><label for="surname">Surname</label> <input type="text" name="last" id="surname"></div>
+        <div class="formfield"><label for="id">Identifier</label> <input type="text" name="id" id="id"></div>
+
+<div class="formfield"><label for="pesel">PESEL</label> <input type="text" name="pesel" id="pesel"></div>
+<!-- Test button preserve console -->
+        <input type="button" value="Test" onclick="validate()">
+
+        <input type="submit" value="Submit">
+        <!-- onsubmit is form attribute!!-->
+    </form>
+</body>
+
+</html>
