@@ -1,0 +1,155 @@
+
+body{
+    color: white;
+    background-color: #050d53;
+    background-image: url('../img/rocket.png'), url('../img/star.png');
+    background-repeat: no-repeat, repeat-y;
+    background-size: 5%, 50%, 50%;
+    background-position: 20% 20%, right;
+}
+
+
+.textt{
+    font-weight: bold;
+}
+
+.typy{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1,h2{
+    text-align: center;
+    background-color: #a09494;
+}
+h3{
+    font-weight: bold;
+}
+.intro{
+    margin: 0 auto;
+    width: 95%;
+    border: 2px solid #ebe2e2;
+    border-left-color: #055305;
+    border-left-style: dashed;
+    border-top-color: #ff0000;
+    border-top-style: solid;
+    border-bottom-color: #800080;
+    border-bottom-style: dotted;
+    border-right-color: #ffff00;
+    border-right-style: dashed;
+}
+
+img{
+    /* float: right; */
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.tekscik{
+    text-indent: 50px;
+    text-align: justify;
+    
+}
+
+.type:hover{
+    background-color: rgb(15, 12, 190);
+}
+
+.type{
+    align-items: center;
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+p{
+    margin: 0;
+}
+
+footer{
+    
+    border-top: 2px dashed red;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fffefe;
+    color: black;
+}
+
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.tg {
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 20%;
+    height: 20%;
+}
+
+.tg td {
+    border-style: solid;
+    border-width: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: rgb(65, 213, 20);
+    border-style: solid;
+    border-width: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-5lze {
+    border-color: #32cb00;
+    text-align: center;
+    vertical-align: top
+}
+
+.tg .tg-zv4m {
+    border-color: #ffffff;
+    text-align: left;
+    vertical-align: top
+}
+
+.tg .tg-8jgo {
+    border-color: #ffffff;
+    text-align: center;
+    vertical-align: center;
+}
+
+.tg .tg-iur0 {
+    border-color: #34ff34;
+    text-align: left;
+    vertical-align: top
+}
+
+label{
+    background-color: white;
+    color: black;
+}
+
+.rezerwacja{
+    border : 1px solid white;
+    display: flex;
+    flex: left;
+    flex-direction: column;
+}
+
+.dane{
+
+}

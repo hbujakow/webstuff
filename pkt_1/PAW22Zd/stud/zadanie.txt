@@ -1,0 +1,66 @@
+
+Laboratorium 4 - Zadanie punktowane nr 1 (20 pkt) 
+
+
+Stwórz 2 strony HTML wyglądające tak, jak na obrazach, które znajdziesz 
+w folderze ./strony.
+ 
+Obie strony mają być napisasne zgodnie z HTML5, wszystkie style muszą znaleźć
+się w jednym pliku css, używanym przez obie strony. Wymagana jest pełna 
+poprawność używanego HTML. Nie można używać atrybutu style ani tagu <style>. 
+
+Wszystkie obrazki niezbędne do wykonania zadania (tło, obrazy) są 
+załączone. Dodatkowo dany jest plik zawierający tekst strony.
+Paleta kolorów może być inna niż na przykładzie o ile oddaje zastosowane
+przejścia i kontrasty.
+
+Pamiętaj, że CSS może być cache'owany przez przeglądarkę, w której otwierasz 
+stronę. W przypadku problemów takich jak brak zmian wyglądu uruchom w nowej karcie, 
+zrestartuj przeglądarkę lub pamięć podręczną (z ostatniej godziny itp.).
+Zweryfikuj rozwiązania w swojej przeglądarce. 
+
+Czas pisania zadania : 90 minut.
+Rozwiązania należy zwrócić przez email:
+do : g.ostrek@mini.pw.edu.pl
+temat : [PAW] Zadanie 1
+Należy załączyć rozwiązanie w formie pliku zip o nazwie takiej jak Twój
+login do sieci MINI PW <login>.zip, które zawiera wszystkie pliki wchodzące w skład
+rozwiązania oraz pliki graficzne z zadania, wymagane przez
+rozwiązanie.
+
+Plik należy umieścić najpóźniej 90 minut po rozpoczęciu pisania zadania. 
+W komentarzu można wpisać używaną przeglądarkę.
+
+
+Szczegółowa punktacja (punkty przyznane tylko za 100% wykonania podzadania):
+3p Wszystkie pliki są zgodne ze standardem HTML5/CSS3 i ważnymi uwagami
+1p Lista numerowana celów podróży
+2p Tabelka z rozkładem lotów z odpowiednimi kolorami obramowań
+ +1p Wyśrodkowana z użyciem CSS (niezależnie od rozmiaru okna przeglądarki)
+2p Półprzezroczysty rysunek rakiety na pierwszej stronie, rakieta nie przesuwa się 
+   przy przewijaniu strony 
+1p Tło strony -- pojedynczy obrazek gwiazdy na środku. 
+   Tło nie przesuwa się przy przewijaniu strony.
+2p Opinie  -- tekst opływa obrazek z lewej strony, 
+   zaokrąglona podwójna ramka dookoła obrazka, bok obrazka: 4em
+   odległość ramki obrazka od tekstu 0.5em
+   Opis ma szerokość 20em
+ +1p Za zastosowanie takich selektorów CSS, żeby nie ustawiać żadnej klasy ani 
+    id bezpośrednio dla elementów img, a styl został zastosowany tylko dla obrazków
+    w ramach opinii o podróży
+1p Link "zarezerwuj już dziś" na stronie jest zielony, pogrubiony, nie podkreślony. Po najechaniu kursorem myszy
+   czerwony. Link wskazuje na stronę z formularzem
+1p Stopka strony, adres jest kursywą, email przekreślony, tekst wyśrodkowany
+2p Formatowanie i kolory nagłówka tak, jak na obrazkach, 4-kolorowa ramka dookoła
+
+Formularz:
+1p Przynajmniej jedno pole formularza i przycisk wysyłania, 
+   zgrupowane pola otoczone ramką z legendą
+1p Pole dzień wymaga dokładnie dwóch cyfr, a pole rok wymaga ciągu 20<cyfra><cyfra>
+1p Pola typu radio pozwalają na wybór tylko jednej opcji na raz
+1p Formatowanie formularza jak na obrazku: etykiety stałej szerokości, 
+   czerwone tło etykiet (równe prostokąty)
+1p Pole wyboru numeru buta typu liczbowego i pole zgłoszenia większego bagażu  
+1p Pola wyboru miesiąca i planety typu select (wystarczy podać po 3 opcje, nie wszystkie miesiące roku)
+1p Kropka następująca w linii po każdym akapicie jest dodawana przez styl CSS i nie ma jej w treści strony
+1p Poprawnie wprowadzone znaki specjalne

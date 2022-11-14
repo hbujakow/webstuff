@@ -1,0 +1,86 @@
+
+body{
+
+    background-color: #050d53;
+    background-image: url('../img/rocket.png'), url('../img/star.png');
+    background-repeat: no-repeat, repeat-y;
+    background-size: 5%, 50%, 50%;
+    background-position: 20% 20%, right;
+}
+
+
+.textt{
+    font-weight: bold;
+}
+
+.typy{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1,h2{
+    text-align: center;
+    background-color: #a09494;
+}
+.intro{
+    margin: 0 auto;
+    width: 95%;
+    border: 2px solid #ebe2e2;
+    border-left-color: #055305;
+    border-left-style: dashed;
+    border-top-color: #ff0000;
+    border-top-style: solid;
+    border-bottom-color: #800080;
+    border-bottom-style: dotted;
+    border-right-color: #ffff00;
+    border-right-style: dashed;
+}
+
+img{
+    /* float: right; */
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.tekscik{
+    text-indent: 50px;
+    text-align: justify;
+    
+}
+
+.type:hover{
+    background-color: rgb(15, 12, 190);
+}
+
+.type{
+    align-items: center;
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+h3{
+    color: #055305;
+}
+
+p{
+    margin: 0;
+}
+
+footer{
+    
+    border-top: 2px dashed red;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fffefe;
+    color: black;
+}
+
+
+img{
+    width: 100px;
+    height: 100px;
+}

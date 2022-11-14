@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hubert Bujakowski</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='page2.css'>
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Loty w kosmos dla Ciebie</h1>
+        <h2>Poznaj naszych przyjaciół z odległych galaktyk</h1>
+    </div>
+
+    <div class="formularz">
+        <h3>Formularz rezerwacji</h3>
+        <form action="" method="get" onsubmit="validate()">
+            <div class="rezerwacja">
+                Data rezerwacji
+                <div class="dane">
+                    <label>Dzień</label>
+                    <input type="date" name="data_rezerwacji" id="data_rezerwacji" required>
+                </div>
+            </div>
+            <br>
+            <div class="rezerwacja">
+                Dane
+                <div class="dane">
+                    <label>Cel podrózy</label>
+                    <select>
+                        <option value="dog">Dog</option>
+                        <option value="cat">Cat</option>
+                        <option value="hamster">Hamster</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="rezerwacja">
+                Informacje o grupie
+                <div class="dane">
+                    <label>Liczba osób</label>
+                    <input type="text" name="liczba_osob" id="liczba_osob" required>
+                    <label>Kod zniżki</label>
+                    <input type="text" name="kod_znizki" id="kod_znizki">
+                    <label>Nr tel.</label>
+                    <input type="text" name="nr_tel" id="nr_tel" required>
+                </div>
+            </div>
+            <input type="submit" value="Rezerwuj już dziś">
+        </form>
+    </div>
+
+    <table class="tg">
+        <thead>
+            <tr>
+                <th class="tg-5lze">Miesiąc</th>
+                <th class="tg-5lze">Poniedziałek</th>
+                <th class="tg-5lze">Wtorek</th>
+                <th class="tg-5lze">Środa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tg-iur0">Styczeń</td>
+                <td class="tg-zv4m" colspan="3">&gt;Brak lotów&lt;</td>
+            </tr>
+            <tr>
+                <td class="tg-iur0">Luty</td>
+                <td class="tg-8jgo" colspan="2" rowspan="2">Brak lotów</td>
+                <td class="tg-8jgo">12:15</td>
+            </tr>
+            <tr>
+                <td class="tg-iur0">Marzec</td>
+                <td class="tg-8jgo">13:15</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <footer>
+        <div class="stopka">
+            <p>Centrum lotów</p>
+            <p>POLGAL & Ska zoo.</p>
+            <p>
+                <i> ul. Gwiezdna
+                    12-345 Gwiazdowo</i>
+            </p>
+            <p><s>odlo@polgal.sa</s></p>
+        </div>
+    </footer>
+    <script src='page2.js'></script>
+</body>
+
+</html>
